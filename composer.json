@@ -1,0 +1,21 @@
+{
+    "name": "grei/queue",
+    "description": "PHP in memory FIFO queue",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://ipynb.wordpress.com",
+    "authors": [
+        {
+            "name": "guangrei",
+            "email": "grei@tuta.io"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {},
+    "autoload" : {
+        "psr-4": {
+            "Grei\\": "./"
+        }
+    }
+}
