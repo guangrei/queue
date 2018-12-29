@@ -5,12 +5,13 @@
 ### usage
 ``` php
 <?php
-$q = new Grei\Queue($byte); // default byte
+$q = new Grei\Queue($byte); // default 1000000 byte
 $q->enqueue($item); // add item to queue
 $q->dequeue(); // remove one queue
 $q->isEmpty(); // cek if queue empty or not
 $q->get(); // get one item and trigger dequeue
 $q->items(); // list all queue items
+$q->close(); // close queue/shmop memory
 
 ```
 this library also available as composer packages
