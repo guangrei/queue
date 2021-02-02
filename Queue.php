@@ -48,9 +48,10 @@ class Queue
     public function dequeue()
     {
         $array = unserialize(shmop_read($this->shm_id, 0, $this->shm_size));
-        array_pop($array);
+        $item = array_pop($array);
         $this->items = shmop_write($this->shm_id, serialize($array), 0);
         $this->shm_size = shmop_size($this->shm_id);
+        return $item;
     }
     
     public function items()
@@ -60,9 +61,7 @@ class Queue
     
     public function get()
     {
-        $array = unserialize(shmop_read($this->shm_id, 0, $this->shm_size));
-        $this->dequeue();
-        return end($array);
+        return $this->dequeue();
     }
     
     public function close()
