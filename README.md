@@ -16,6 +16,6 @@ $q->close(); // close queue/shmop memory
 ```
 this library also available as composer packages
 ```
-composer require grei/queue:dev-master
+composer require grei/queue
 ```
 
